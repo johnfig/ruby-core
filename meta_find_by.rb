@@ -1,6 +1,6 @@
 class User
   attr_accessor :first_name, :last_name, :age, :gender
-  
+
   def initialize(first_name, last_name, age, gender)
     @first_name = first_name
     @last_name = last_name
