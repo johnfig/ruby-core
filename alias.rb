@@ -10,5 +10,6 @@ end
 
 john = Person.new("The Dawg")
 
-puts john.name
-puts john.title
+puts john.name  #=> The Dawg
+puts john.title #=> The Dawg
+
