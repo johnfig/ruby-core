@@ -1,9 +1,9 @@
 class Hyundai
   attr_reader :year, :miliage, :price
 
-  def initialize(year, miliage, price)
+  def initialize(year, mileage, price)
     @year = year
-    @miliage = miliage
+    @mileage = mileage
     @price = price
   end
 
