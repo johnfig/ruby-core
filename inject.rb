@@ -1,11 +1,11 @@
-# is a synonym for #inject
+# is a synonym for #reduce
 # it is used to iterate over objects with another
 # memoized object that can be manipulated
 
 # you have to return memo at the end of the iteration
 # loop in order for reduce to work properly
 
-class ReduceArray
+class InjectArray
   attr_accessor :array
 
   def initialize(array)
@@ -29,8 +29,8 @@ class ReduceArray
   end
 end
 
-reduced = ReduceArray.new([1,2,3,4,5])
+injected = InjectArray.new([1,2,3,4,5])
 
-reduced.sum
-reduced.multiply
-reduced.hash
+injected.sum
+injected.multiply
+injected.hash
