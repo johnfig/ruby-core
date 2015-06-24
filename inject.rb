@@ -27,6 +27,16 @@ class InjectArray
       memo
     end
   end
+
+  def new_array
+    new_array = array.inject([]) do |memo, number|
+      memo << number
+    end
+
+
+    puts ''
+    print new_array
+  end
 end
 
 injected = InjectArray.new([1,2,3,4,5])
@@ -34,3 +44,4 @@ injected = InjectArray.new([1,2,3,4,5])
 injected.sum
 injected.multiply
 injected.hash
+injected.new_array
