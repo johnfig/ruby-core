@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     awesome_print (1.6.1)
+    benchmark-ips (2.3.0)
     coderay (1.1.0)
     method_source (0.8.2)
     pry (0.10.1)
@@ -15,4 +16,5 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  benchmark-ips (~> 2.3)
   pry
