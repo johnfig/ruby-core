@@ -1,26 +1,27 @@
-# This successfully implements a let block with rspec
+# This successfully implements a #let and #let! block with rspec
+# All let blocks are is defined methods that yield blocks that
+# are passed in, they are methods that take 2 arguments, a symbol
+# and a block
 
+require 'pry'
 def let(symbol, &block)
   define_method(symbol) do
     yield
   end
 end
 
-let(:hello_world) { puts 'hello world' }
-
-hello_world
-
 def let!(symbol, &block)
   define_method(symbol) do
     yield
-  end
-  symbol
+  end.call
+  method(symbol).call
 end
 
 Dog = Struct.new(:name)
 
-puts respond_to? :dog
+let(:hello_world) { 'hello world' }
 let!(:dog) { Dog.new('sparky') }
-puts respond_to? :dog
+
+puts hello_world
 puts dog.inspect
 
