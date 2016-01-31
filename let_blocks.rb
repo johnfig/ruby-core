@@ -13,8 +13,8 @@ end
 def let!(symbol, &block)
   define_method(symbol) do
     yield
-  end.call
-  method(symbol).call
+  end
+  yield
 end
 
 Dog = Struct.new(:name)
