@@ -4,6 +4,7 @@
 # and a block
 
 require 'pry'
+
 def let(symbol, &block)
   define_method(symbol) do
     yield
@@ -11,9 +12,7 @@ def let(symbol, &block)
 end
 
 def let!(symbol, &block)
-  define_method(symbol) do
-    yield
-  end
+  let(symbol, &block)
   yield
 end
 
@@ -22,6 +21,7 @@ Dog = Struct.new(:name)
 let(:hello_world) { 'hello world' }
 let!(:dog) { Dog.new('sparky') }
 
+puts hello_world
 puts hello_world
 puts dog.inspect
 
